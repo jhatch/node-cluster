@@ -1,4 +1,4 @@
-# Balance an Express server over avialable CPU cores
+# Balance an Express server over available CPU cores
 
 ## To run the example:
 
