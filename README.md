@@ -3,6 +3,9 @@
 ## Overview
 NodeJS as of v0.12 comes with the [cluster](https://stash1.internal.jibe.com/projects/NJS/repos/jibe-node-labs-cluster/browse) package. This allows us to balance our Node apps across multiple CPU cores despite NodeJS being inherently single threaded. We could begin using multi-core machines to improve throughput of our apps, while still load balancing those machines themselves for reliability.
 
+## Caveats
+Each worker has its own memory space. If processes need to share state they cannot do it via in memory objects! For example with sessions, you'd need to use something like Redis to share that state as a simple in-memory cache would not work across processes.
+
 ## To run the example:
 
 `npm start`
