@@ -25,4 +25,4 @@ NodeJS as of v0.12 comes with the [cluster](https://stash1.internal.jibe.com/pro
 [PID=13278] handling a request
 ```
 
-Note that different PID's are handling incoming requests from various clients. In the above example the machine running has 4 cores as you can see by the initial 4 lines of input. Each core is sharing the same socket listening on port 3001.
+In the above example the machine running has 4 cores as you can see by the initial 4 lines of input. Each core is sharing the same socket listening on port 3001. As requests come in to that socket connection, they are round-robin'd off to the workers who then do the actual request handling.
