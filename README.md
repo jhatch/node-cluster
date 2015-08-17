@@ -1,5 +1,7 @@
 # Balance an Express server over available CPU cores
 
+### Tested against Node 0.12.5 specifically.
+
 ## Overview
 NodeJS as of v0.12 comes with the [cluster](https://stash1.internal.jibe.com/projects/NJS/repos/jibe-node-labs-cluster/browse) package. This allows us to balance our Node apps across multiple CPU cores despite NodeJS being inherently single threaded. We could begin using multi-core machines to improve throughput of our apps, while still load balancing those machines themselves for reliability.
 
